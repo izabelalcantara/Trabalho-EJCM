@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Ejcm</title>
+    <link rel="stylesheet" href="/pasta/style_cadastro.css">
+
+</head>
+<body>
+    
+    <div class="content">
+        <h5><bold>Cadastro</bold></h5>
+        <form id="form">
+            <fieldset>
+                 <legend>  Nome</legend>
+                 <input type="text" placeholder="nome de usuário" class="inputs required" oninput="nameValidate()">
+                 <span class="span-required">Nome de usuário não pode ter espaço</span>
+                 
+            </fieldset>
+
+         <fieldset>
+             <legend>Email</legend>
+             <input type="email" placeholder="example@email.com" class="inputs required" oninput="emailValidate()">
+             <span class="span-required">Digite um email válido</span> 
+         </fieldset>
+
+         <fieldset>
+             <legend>Data de nascimento</legend>
+             <input type="dob" placeholder="xx/xx/xxxx" class="inputs"> 
+         </fieldset>
+
+         
+         <fieldset>
+             <legend>Senha</legend>
+             <div class="olho">
+               <input type="password" placeholder="● ● ● ● ● ● ● ● ●"  id=senha  class="inputs required" oninput="mainPasswordValidate()" >
+               <img src="/assets/imagnes/Vector.svg" alt="" >
+            </div>
+                <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span> 
+         </fieldset>
+      
+         <fieldset>
+             <legend>Confirmar senha</legend>
+             <div class="olho">
+             <input type="password" placeholder="● ● ● ● ● ● ● ● ●" class="inputs required" oninput="comparePassword()">
+             <img src="/assets/imagnes/Vector.svg" alt="" >
+            </div>
+             <span class="span-required">Senhas devem ser compatíveis</span>  
+         </fieldset>
+
+            <div class="box-select">
+                <div>
+                    <input type="checkbox" id="newslatter" value="newslatter" name="experiencias">
+                    <label for="newslatter">Li e estou de acordo com os <a href="#">Termos</a><label for="newslatter"> e </label> <a href="#"> Condições de Uso</a></label>
+                </div> 
+            </div>
+            <button type="submit"  class="cadastro" id="cadastros" onclick="cadastro()">Cadastrar</button>
+
+            
+            <div class="login">
+                <button type="button" class="login" id="logins" onclick="login()"><a href="#">Fazer Login</a></button>
+            </div>
+           
+        </form>
+    </div>
+        <section class="first">
+        <img src="/assets/imagnes/Logo TT.png" alt="">
+      </section>
+    
+   </div>
+</body>
+
+<script type="text/javascript" src="/assets/script_cadastro.js"></script>
+</html>
